@@ -1,0 +1,12 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.0"}
+        ;; FULL self-improving loop package: orc-service + evaluation +
+        ;; gepa + ontology + colbert + mcp-sheet-builder + llm + langfuse
+        ;; + file-store (projects/orc — see docs/PACKAGES.md).
+        obneyai/orc {:local/root "../../../projects/orc"}
+        ;; Consumer-provided event store (ORC is a library; the umbrella
+        ;; does not carry the SQLite brick). Same Grain sha the umbrella pins.
+        obneyai/grain-event-store-sqlite-v3
+        {:git/url "https://github.com/ObneyAI/grain.git"
+         :git/sha "dbf5b5229aad09785e40f71e96adf65c90f971d5"
+         :deps/root "projects/grain-event-store-sqlite-v3"}}}

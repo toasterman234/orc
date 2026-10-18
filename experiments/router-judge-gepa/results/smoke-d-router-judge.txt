@@ -1,0 +1,4 @@
+items judged: 3
+ok: 3
+scores (grounding, decision records): [0.25 0.0 0.25]
+note: full per-item detail in data/judge_smoke_d_detail.edn (gitignored). The labeled dataset carries classification fields + route/stage only, no item text — judges scored the decision record against the gold classification, per the router mapping.

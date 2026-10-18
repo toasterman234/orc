@@ -1,0 +1,1 @@
+{:living-description-enabled true, :embed-dim 384, :processors-running 34}

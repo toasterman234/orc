@@ -1,0 +1,1686 @@
+{
+  "generated-at" : "2026-10-18T01:41:22.124975904Z",
+  "tenant-id" : "11111111-1111-1111-1111-111111111111",
+  "method" : {
+    "route" : "router-loop.export-loop: sys/start (same wiring as the smokes), queries/projections only, sys/start-reindex-processor! to mirror the full-loop end state, sys/stop",
+    "commands-issued" : [ ],
+    "llm-calls-by-this-program" : 0
+  },
+  "processors" : {
+    "registered-in-todo-processor-registry" : 35,
+    "started-at-boot" : 34,
+    "skipped-at-boot" : [ ":ontology/on-description-updated-maybe-reindex" ],
+    "running-after-reindex-processor-start" : 35
+  },
+  "event-census-at-query-time" : {
+    "total-events" : 2296,
+    "by-type" : {
+      ":colbert/index-created" : 18,
+      ":gepa/candidate-created" : 3,
+      ":gepa/candidate-evaluated" : 3,
+      ":gepa/candidate-evaluation-started" : 3,
+      ":gepa/datasets-stored" : 1,
+      ":gepa/frontier-updated" : 3,
+      ":gepa/optimization-completed" : 1,
+      ":gepa/optimization-started" : 1,
+      ":gepa/proposal-ready" : 4,
+      ":gepa/subsample-evaluated" : 4,
+      ":gepa/subsample-evaluation-started" : 4,
+      ":gepa/task-call-completed" : 30,
+      ":grain/tx" : 1091,
+      ":judge/composite-score-computed" : 2,
+      ":judge/score-emitted" : 4,
+      ":ontology/behavioral-subtree-minted" : 20,
+      ":ontology/concept-created" : 85,
+      ":ontology/consolidation-requested" : 8,
+      ":ontology/description-consolidation-failed" : 6,
+      ":ontology/living-description-enabled-set" : 4,
+      ":ontology/mint-reindex-forced" : 20,
+      ":ontology/node-instance-description-updated" : 1,
+      ":ontology/node-type-description-updated" : 41,
+      ":ontology/ontology-created" : 6,
+      ":ontology/relationship-created" : 211,
+      ":ontology/tree-description-updated" : 293,
+      ":sheet/content-hash-set" : 3,
+      ":sheet/ephemeral-evaluations-recorded" : 35,
+      ":sheet/execution-trace-refreshed" : 33,
+      ":sheet/execution-traced" : 37,
+      ":sheet/execution-value-written" : 95,
+      ":sheet/judge-declared" : 2,
+      ":sheet/key-declared" : 17,
+      ":sheet/node-created" : 5,
+      ":sheet/node-execution-completed" : 37,
+      ":sheet/node-execution-started" : 37,
+      ":sheet/node-executor-set" : 3,
+      ":sheet/node-instruction-set" : 3,
+      ":sheet/node-io-set" : 3,
+      ":sheet/node-judges-set" : 1,
+      ":sheet/node-name-set" : 5,
+      ":sheet/rlm-tree-node-completed" : 36,
+      ":sheet/sheet-created" : 3,
+      ":sheet/tree-tick-completed" : 37,
+      ":sheet/tree-tick-started" : 37
+    }
+  },
+  "layer6" : {
+    "ontologies" : [ {
+      "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+      "name" : "Tree class ontology",
+      "scope" : "tree-class",
+      "created-at" : "2026-10-17T18:09:18.551153657Z",
+      "description" : "ORC managed Tree class ontology",
+      "base-uri" : "tree-class:"
+    }, {
+      "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+      "name" : "Behavioral subtree ontology",
+      "scope" : "behavioral-subtree",
+      "created-at" : "2026-10-17T18:09:22.706341957Z",
+      "description" : "ORC managed Behavioral subtree ontology",
+      "base-uri" : "behavioral-subtree:"
+    }, {
+      "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+      "name" : "Structural-v1 vocabulary (master-repo-0.1) — LAB MIRROR, not canonical",
+      "scope" : "custom",
+      "created-at" : "2026-10-17T20:50:04.509726366Z",
+      "description" : "LAB MIRROR — not canonical. Structural-v1 class vocabulary mirror; the full description text is held in the local store record and is redacted in this published export.",
+      "base-uri" : "urn:master-repo-0.1:structural-v1:"
+    } ],
+    "ontology-created-events" : {
+      "count" : 6,
+      "detail" : [ {
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "name" : "Tree class ontology",
+        "scope" : "tree-class"
+      }, {
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "name" : "Tree class ontology",
+        "scope" : "tree-class"
+      }, {
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "name" : "Tree class ontology",
+        "scope" : "tree-class"
+      }, {
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "name" : "Behavioral subtree ontology",
+        "scope" : "behavioral-subtree"
+      }, {
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "name" : "Behavioral subtree ontology",
+        "scope" : "behavioral-subtree"
+      }, {
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "name" : "Structural-v1 vocabulary (master-repo-0.1) — LAB MIRROR, not canonical",
+        "scope" : "custom"
+      } ],
+      "note" : "Detail lists every :ontology/ontology-created event in the stream (id + name + scope as emitted); the ontologies read model keys by :ontology-id, so repeat creations of the same stable id collapse to one live entry."
+    },
+    "ontologies-read-model-entries" : 3,
+    "concepts" : {
+      "count" : 81,
+      "read-model-entries" : 81,
+      "statistics" : {
+        "total-concepts" : 81,
+        "by-scope" : {
+          "behavioral-subtree" : 17,
+          "custom" : 41,
+          "tree-class" : 23
+        },
+        "with-indicators" : 0
+      },
+      "list" : [ {
+        "uri" : "behavioral-subtree:b638e3fa-50c0-3fb8-b306-11d067550afe",
+        "id" : "2e54467e-5e21-4311-98b6-79d5315eabe8",
+        "label" : "b638e3fa-50c0-3fb8-b306-11d067550afe",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Resource",
+        "id" : "26934ba4-473c-5053-9656-42fe5d41b83d",
+        "label" : "Resource",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:0f11dba5-c331-3cdf-81fa-8ee114fc224f",
+        "id" : "f5491f7e-a4af-4632-b52c-3d2367525078",
+        "label" : "0f11dba5-c331-3cdf-81fa-8ee114fc224f",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Issue",
+        "id" : "4d03f094-0bac-598b-8672-ee2267a5108d",
+        "label" : "Issue",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Decision",
+        "id" : "5681632e-0d1d-5b17-bb5b-f77a092ba0da",
+        "label" : "Decision",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Confidence",
+        "id" : "71020d50-0d0f-5534-86af-b8b238a1c872",
+        "label" : "Confidence",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Change",
+        "id" : "81ff26b7-8df2-5831-a3db-15ff8a6b0eec",
+        "label" : "Change",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Playbook",
+        "id" : "77b60cc0-b72c-5864-b394-32bd1d81fce1",
+        "label" : "Playbook",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Actor",
+        "id" : "46e485dc-53a5-5aec-af3d-733655d40103",
+        "label" : "Actor",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:1b1480f1-66b3-399a-8715-e5b8f023a71b",
+        "id" : "b248930d-1c64-4afd-880b-bd47a9806d58",
+        "label" : "1b1480f1-66b3-399a-8715-e5b8f023a71b",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Verification",
+        "id" : "db62ff6f-cfa7-5e58-bfa2-e71c7b3a4a90",
+        "label" : "Verification",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Outcome",
+        "id" : "d2589ea4-e9b5-58f9-b1b2-84261e9574af",
+        "label" : "Outcome",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:225be622-6cc2-3359-8c18-024bdf08548d",
+        "id" : "5877ddc9-1e3c-47e6-993b-a21d223410a2",
+        "label" : "225be622-6cc2-3359-8c18-024bdf08548d",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:c841adb5-394a-3f45-b904-49e9f2822b6b",
+        "id" : "e458daa3-c9e8-49da-8fcd-88cc7eaff3fe",
+        "label" : "c841adb5-394a-3f45-b904-49e9f2822b6b",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:00000000-c1c1-4001-b003-d0c0a0a0a0a3",
+        "id" : "53562d3a-3c12-48ad-8bf8-0bd88d579ede",
+        "label" : "00000000-c1c1-4001-b003-d0c0a0a0a0a3",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:ActionRequest",
+        "id" : "b393c167-de5b-5a4b-b0a8-fc0d8ca0c0bf",
+        "label" : "ActionRequest",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:c38abdbd-be30-38e7-8f81-e431cdba7a07",
+        "id" : "49e86551-b3f9-4851-acdc-ded63f562867",
+        "label" : "c38abdbd-be30-38e7-8f81-e431cdba7a07",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Event",
+        "id" : "c384730a-2c8e-55d7-827f-5e06deb3e922",
+        "label" : "Event",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Relationship",
+        "id" : "6eb8eb3e-699b-57c0-97d5-56dba9ebe0da",
+        "label" : "Relationship",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:b3597aa7-3957-3734-90c6-531d27c08f67",
+        "id" : "eb4fdbd7-bb0e-444e-a042-36805591406b",
+        "label" : "b3597aa7-3957-3734-90c6-531d27c08f67",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:0682ce06-3c86-3083-92db-e2c43a66e54b",
+        "id" : "e65c8d72-35e9-4746-8855-ebe3fbca071d",
+        "label" : "0682ce06-3c86-3083-92db-e2c43a66e54b",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:5a08300e-10e3-305a-80c1-17eafea15ff7",
+        "id" : "367af9c4-3ef3-49ac-b145-a5dceac07870",
+        "label" : "5a08300e-10e3-305a-80c1-17eafea15ff7",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:AccessGrant",
+        "id" : "2f121b32-6dd9-5edb-862b-274b972548aa",
+        "label" : "AccessGrant",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Tool",
+        "id" : "7fa28bb1-d102-5faa-a811-abcce791c308",
+        "label" : "Tool",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Entity",
+        "id" : "69f73311-00dc-5266-accc-75dc8d0f35af",
+        "label" : "Entity",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:seed:tree:ResearchThenSynthesize",
+        "id" : "47bee841-576f-4cab-96de-727e9c023534",
+        "label" : "seed:tree:ResearchThenSynthesize",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Provenance",
+        "id" : "12594063-ce5e-5ffc-abdd-9535bdd431af",
+        "label" : "Provenance",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:ObservationEvent",
+        "id" : "ea353328-52e0-5841-917b-b09ccfbbc558",
+        "label" : "ObservationEvent",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Role",
+        "id" : "d431fe0b-12fb-5299-b5af-983192c77eac",
+        "label" : "Role",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:00000000-c1c1-4001-b002-d0c0a0a0a0a2",
+        "id" : "1f9d0f63-12df-41b4-b546-4a5b54a50168",
+        "label" : "00000000-c1c1-4001-b002-d0c0a0a0a0a2",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:GovernedClassifier",
+        "id" : "9a3ae6b5-2313-51e9-9b5f-17c91e119664",
+        "label" : "GovernedClassifier",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:c1b27691-4a1b-3ee2-bb73-595b155b99be",
+        "id" : "e9768775-f589-47d7-9945-cd211d571371",
+        "label" : "c1b27691-4a1b-3ee2-bb73-595b155b99be",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:8ad38e72-05e4-3201-bac7-3ed9c54a2791",
+        "id" : "9e34e4fc-f718-4ab9-a082-0e5a5df58383",
+        "label" : "8ad38e72-05e4-3201-bac7-3ed9c54a2791",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Evidence",
+        "id" : "ead76283-2868-584e-ab9a-0bea2093ebaa",
+        "label" : "Evidence",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:bf47c816-2833-320e-9fbd-6ae109275ab0",
+        "id" : "a57da501-492f-4c63-b033-6d762a44b67b",
+        "label" : "bf47c816-2833-320e-9fbd-6ae109275ab0",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:00000000-c1c1-4001-b001-d0c0a0a0a0a1",
+        "id" : "7697ee82-78de-495f-8245-3742e20102cf",
+        "label" : "00000000-c1c1-4001-b001-d0c0a0a0a0a1",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:seed:tree:SequentialPipeline",
+        "id" : "e7cf028c-bf87-457a-bfe9-0abc1f0ba4a1",
+        "label" : "seed:tree:SequentialPipeline",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Process",
+        "id" : "3a933fd4-d63a-5971-87c8-a7ecc3737ffd",
+        "label" : "Process",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Source",
+        "id" : "98a12e20-aa7f-56ac-848f-08f39518c4a7",
+        "label" : "Source",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:1c0f6cd8-6187-3d8e-993e-2df630968760",
+        "id" : "ae8d0e4f-f080-48d2-a236-10d864fa9788",
+        "label" : "1c0f6cd8-6187-3d8e-993e-2df630968760",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Action",
+        "id" : "96454b48-4fef-511c-84eb-916f4273d8fe",
+        "label" : "Action",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Constraint",
+        "id" : "291c562e-b9a5-55d5-9c5b-5271ca5c8cf8",
+        "label" : "Constraint",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:SourceBinding",
+        "id" : "e3f3f53a-6235-5e8e-9eef-1821b5d880eb",
+        "label" : "SourceBinding",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:abe48812-ad0f-3a27-a142-806558801fc0",
+        "id" : "640a405e-4c92-4373-8d22-410de3cd3c01",
+        "label" : "abe48812-ad0f-3a27-a142-806558801fc0",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:abe10f3b-ab49-3916-ae30-0ca7abfcad96",
+        "id" : "78c9e616-d00f-4131-b526-32ffb9054c9f",
+        "label" : "abe10f3b-ab49-3916-ae30-0ca7abfcad96",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:seed:tree:ParallelIndependent",
+        "id" : "2a6902ff-1cf7-4f89-97e3-36f496a4e21b",
+        "label" : "seed:tree:ParallelIndependent",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:01f78800-c0e7-34b3-bb09-a7a6a95a022d",
+        "id" : "67c7454e-f3e2-4979-bf6a-e05405e8d1b1",
+        "label" : "01f78800-c0e7-34b3-bb09-a7a6a95a022d",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Gate",
+        "id" : "ecef7648-850a-56d9-9acc-d931ef799c64",
+        "label" : "Gate",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Plan",
+        "id" : "4b7ce6f4-b932-53bf-8b4e-a1ee3b24c426",
+        "label" : "Plan",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Capability",
+        "id" : "a115237b-9f65-5134-8b3e-fa03dd20d44c",
+        "label" : "Capability",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:seed:tree:MapReduce",
+        "id" : "44613824-a9f8-41bd-881a-82a80d1527d4",
+        "label" : "seed:tree:MapReduce",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Skill",
+        "id" : "ed126bc1-5149-5d00-88f1-ea5d7e914655",
+        "label" : "Skill",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Policy",
+        "id" : "5c6d51fd-cae3-513c-8328-a42dbe954325",
+        "label" : "Policy",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Goal",
+        "id" : "9e50c329-6d37-56a7-befb-a506566e2bc7",
+        "label" : "Goal",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:2bce84a1-d186-3892-8131-c19b59e4543e",
+        "id" : "ab939a16-c5d1-4001-a07c-c69d5095a911",
+        "label" : "2bce84a1-d186-3892-8131-c19b59e4543e",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:9880798a-8487-3a24-93e4-b59c5ae5d789",
+        "id" : "900110e1-dd5e-4af1-aa01-d0b984ebaa0d",
+        "label" : "9880798a-8487-3a24-93e4-b59c5ae5d789",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:acbcf0ca-6478-3a63-8b93-31b93bf0902c",
+        "id" : "6e6d4ee9-e367-49a2-9741-0c93e54765e9",
+        "label" : "acbcf0ca-6478-3a63-8b93-31b93bf0902c",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:153f1c69-e1d8-3592-8e62-391a7fab2dac",
+        "id" : "b535fb83-0099-4186-9e05-adc270c60a01",
+        "label" : "153f1c69-e1d8-3592-8e62-391a7fab2dac",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:aef71f08-76bf-373c-862a-1250ef23f450",
+        "id" : "bc929d6b-aa1e-4832-89b3-59846fcfcf5e",
+        "label" : "aef71f08-76bf-373c-862a-1250ef23f450",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Result",
+        "id" : "3127cf5e-a63e-52fb-8d06-5bd218f94863",
+        "label" : "Result",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:AuthorityGrant",
+        "id" : "5077fcda-0a85-5701-aac3-961ad5431bb7",
+        "label" : "AuthorityGrant",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Project",
+        "id" : "cbab2867-53e4-558e-8c26-e69d07422358",
+        "label" : "Project",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Claim",
+        "id" : "e555185f-3ace-5fff-b966-53c1fc5f32d8",
+        "label" : "Claim",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:760be698-0bb8-3a5a-a2bd-1d45445a5861",
+        "id" : "e7eaabdf-bfe4-4967-a8fa-68830c761025",
+        "label" : "760be698-0bb8-3a5a-a2bd-1d45445a5861",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:24bfab75-94ed-35f8-9323-ec6e33b0440d",
+        "id" : "ebb6a751-1eda-4518-a7f8-d8c0131d4ff6",
+        "label" : "24bfab75-94ed-35f8-9323-ec6e33b0440d",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Run",
+        "id" : "0c9ed2aa-90ab-5c09-98f6-245382e4ca45",
+        "label" : "Run",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:fc82d884-b2c7-38a7-9783-ac2bba41237f",
+        "id" : "68bbd2a9-035a-4c10-acb4-b3bf16ee1081",
+        "label" : "fc82d884-b2c7-38a7-9783-ac2bba41237f",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:EvaluationCase",
+        "id" : "59edb101-ed2f-50e0-a219-c7b629820b64",
+        "label" : "EvaluationCase",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:ed8fac34-ba1d-3855-9fc7-7f9d0205190a",
+        "id" : "f58ac125-b703-4f78-934d-3d708f54268a",
+        "label" : "ed8fac34-ba1d-3855-9fc7-7f9d0205190a",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:d41af303-dcb2-3599-9198-0c006d1cc364",
+        "id" : "d535c154-ce10-48aa-9291-cbaf9c198811",
+        "label" : "d41af303-dcb2-3599-9198-0c006d1cc364",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:SourceObject",
+        "id" : "2736efa3-9b3f-5936-8356-3e0c8851bd8c",
+        "label" : "SourceObject",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:86275302-0c3d-35ae-b74e-abd4f27984eb",
+        "id" : "39e6a749-f875-4b0b-bf67-57e4cd9c1d3d",
+        "label" : "86275302-0c3d-35ae-b74e-abd4f27984eb",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:SemanticBundle",
+        "id" : "8d55b594-4f6c-5cc9-aec1-9f7bd676de75",
+        "label" : "SemanticBundle",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:00000000-c1c1-4001-b005-d0c0a0a0a0a5",
+        "id" : "9d120b30-1b05-43b4-bfed-f956ef4923a7",
+        "label" : "00000000-c1c1-4001-b005-d0c0a0a0a0a5",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Rule",
+        "id" : "8fad7db1-261b-5fe4-ac44-cfed51acc94e",
+        "label" : "Rule",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "behavioral-subtree:1361eafc-6a90-391a-97a9-b558118f1f57",
+        "id" : "bfac7019-b907-405c-b040-13f5bdf4d688",
+        "label" : "1361eafc-6a90-391a-97a9-b558118f1f57",
+        "scope" : "behavioral-subtree",
+        "ontology-id" : "f5ec20c9-cdde-322f-8092-673af260ebfc",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:00000000-c1c1-4001-b004-d0c0a0a0a0a4",
+        "id" : "7a386577-19f7-488f-8afb-1771a5587483",
+        "label" : "00000000-c1c1-4001-b004-d0c0a0a0a0a4",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:seed:tree:FallbackRecovery",
+        "id" : "aa4eb8bd-1e50-4080-a3ee-aa65db96b693",
+        "label" : "seed:tree:FallbackRecovery",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:seed:tree:ValidationLoop",
+        "id" : "a1a97705-da2b-45ae-97bb-f8bde48b8696",
+        "label" : "seed:tree:ValidationLoop",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "urn:master-repo-0.1:structural-v1:Domain",
+        "id" : "627473fe-62ec-5098-9806-ea865b345d6b",
+        "label" : "Domain",
+        "scope" : "custom",
+        "ontology-id" : "4b5548c5-366f-50fd-bcb4-8b2d74b598f4",
+        "provenance-kind" : "imported",
+        "lifecycle-status" : null
+      }, {
+        "uri" : "tree-class:seed:tree:ChunkedExtraction",
+        "id" : "8f7e9db9-f2a3-4126-9ffc-2b6e6f4ce6d8",
+        "label" : "seed:tree:ChunkedExtraction",
+        "scope" : "tree-class",
+        "ontology-id" : "4c2d0536-4f4f-32d8-95aa-865571a8978a",
+        "provenance-kind" : "system-static",
+        "lifecycle-status" : null
+      } ],
+      "lifecycle-status-note" : "The concepts read model carries no :status/:lifecycle field per entry (checked :status and :lifecycle keys); entries carry :scope and :provenance instead.",
+      "concept-created-events" : 85,
+      "relationship-created-events" : 211
+    },
+    "evolutionary-builder" : {
+      "exercised" : false,
+      "concepts-extracted-events" : 0,
+      "relationships-extracted-events" : 0,
+      "evidence" : "es/read over the full tenant stream in this run + the SQLite type census: neither :evolutionary/* event type exists in the store; consumer/src contains no build-from-sources / evolve call (grep). Interface fns live in components/ontology/src/ai/obney/orc/ontology/interface/evolutionary.clj (loaded via the ontology component)."
+    }
+  },
+  "layer7" : {
+    "living-description-enabled" : {
+      "value" : true,
+      "evidence" : "ontology/get-living-description-enabled? (query over :ontology/living-description-enabled read model) on the freshly started system; no set command issued by this program",
+      "enabled-set-events" : 4
+    },
+    "living-descriptions" : {
+      "total" : 116,
+      "by-granularity" : {
+        "node-type" : 11,
+        "tree-fingerprint" : 40,
+        "tree-class" : 64,
+        "node-instance" : 1
+      },
+      "list" : [ {
+        "granularity" : "node-type",
+        "target-id" : "parallel",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "fallback",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "leaf",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "final",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "llm",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "condition",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "sequence",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "code",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "aggregate",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "chunk-document",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-type",
+        "target-id" : "map-each",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "00000000-c1c1-4001-b001-d0c0a0a0a0a1",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "1c0f6cd8-6187-3d8e-993e-2df630968760",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "00000000-c1c1-4001-b003-d0c0a0a0a0a3",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "00000000-c1c1-4001-b002-d0c0a0a0a0a2",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "00000000-c1c1-4001-b005-d0c0a0a0a0a5",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "00000000-c1c1-4001-b004-d0c0a0a0a0a4",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "760be698-0bb8-3a5a-a2bd-1d45445a5861",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "1b1480f1-66b3-399a-8715-e5b8f023a71b",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "5a08300e-10e3-305a-80c1-17eafea15ff7",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "b3597aa7-3957-3734-90c6-531d27c08f67",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "1361eafc-6a90-391a-97a9-b558118f1f57",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "bf47c816-2833-320e-9fbd-6ae109275ab0",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "0682ce06-3c86-3083-92db-e2c43a66e54b",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "seed:tree:ValidationLoop",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "c38abdbd-be30-38e7-8f81-e431cdba7a07",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "b638e3fa-50c0-3fb8-b306-11d067550afe",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "153f1c69-e1d8-3592-8e62-391a7fab2dac",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "24bfab75-94ed-35f8-9323-ec6e33b0440d",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "abe48812-ad0f-3a27-a142-806558801fc0",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "seed:tree:MapReduce",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "c841adb5-394a-3f45-b904-49e9f2822b6b",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "86275302-0c3d-35ae-b74e-abd4f27984eb",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "aef71f08-76bf-373c-862a-1250ef23f450",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "seed:tree:ChunkedExtraction",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "0f11dba5-c331-3cdf-81fa-8ee114fc224f",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "c1b27691-4a1b-3ee2-bb73-595b155b99be",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "2bce84a1-d186-3892-8131-c19b59e4543e",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "ed8fac34-ba1d-3855-9fc7-7f9d0205190a",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "seed:tree:FallbackRecovery",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "fc82d884-b2c7-38a7-9783-ac2bba41237f",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "seed:tree:SequentialPipeline",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "01f78800-c0e7-34b3-bb09-a7a6a95a022d",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "seed:tree:ResearchThenSynthesize",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "8ad38e72-05e4-3201-bac7-3ed9c54a2791",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "9880798a-8487-3a24-93e4-b59c5ae5d789",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "seed:tree:ParallelIndependent",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "abe10f3b-ab49-3916-ae30-0ca7abfcad96",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "acbcf0ca-6478-3a63-8b93-31b93bf0902c",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "225be622-6cc2-3359-8c18-024bdf08548d",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-fingerprint",
+        "target-id" : "d41af303-dcb2-3599-9198-0c006d1cc364",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "a115237b-9f65-5134-8b3e-fa03dd20d44c",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "00000000-c1c1-4001-b001-d0c0a0a0a0a1",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "1c0f6cd8-6187-3d8e-993e-2df630968760",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "00000000-c1c1-4001-b003-d0c0a0a0a0a3",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "00000000-c1c1-4001-b002-d0c0a0a0a0a2",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "4b7ce6f4-b932-53bf-8b4e-a1ee3b24c426",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "00000000-c1c1-4001-b005-d0c0a0a0a0a5",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "71020d50-0d0f-5534-86af-b8b238a1c872",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "69f73311-00dc-5266-accc-75dc8d0f35af",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "ecef7648-850a-56d9-9acc-d931ef799c64",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "00000000-c1c1-4001-b004-d0c0a0a0a0a4",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "46e485dc-53a5-5aec-af3d-733655d40103",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "12594063-ce5e-5ffc-abdd-9535bdd431af",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "96454b48-4fef-511c-84eb-916f4273d8fe",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "2f121b32-6dd9-5edb-862b-274b972548aa",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "5a08300e-10e3-305a-80c1-17eafea15ff7",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "ed126bc1-5149-5d00-88f1-ea5d7e914655",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "5c6d51fd-cae3-513c-8328-a42dbe954325",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "0682ce06-3c86-3083-92db-e2c43a66e54b",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "627473fe-62ec-5098-9806-ea865b345d6b",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "cbab2867-53e4-558e-8c26-e69d07422358",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "seed:tree:ValidationLoop",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "c38abdbd-be30-38e7-8f81-e431cdba7a07",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "153f1c69-e1d8-3592-8e62-391a7fab2dac",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "ead76283-2868-584e-ab9a-0bea2093ebaa",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "ea353328-52e0-5841-917b-b09ccfbbc558",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "24bfab75-94ed-35f8-9323-ec6e33b0440d",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "d431fe0b-12fb-5299-b5af-983192c77eac",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "9e50c329-6d37-56a7-befb-a506566e2bc7",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "4d03f094-0bac-598b-8672-ee2267a5108d",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "seed:tree:MapReduce",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "9a3ae6b5-2313-51e9-9b5f-17c91e119664",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "291c562e-b9a5-55d5-9c5b-5271ca5c8cf8",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "8d55b594-4f6c-5cc9-aec1-9f7bd676de75",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "59edb101-ed2f-50e0-a219-c7b629820b64",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "26934ba4-473c-5053-9656-42fe5d41b83d",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "3127cf5e-a63e-52fb-8d06-5bd218f94863",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "aef71f08-76bf-373c-862a-1250ef23f450",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "seed:tree:ChunkedExtraction",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "3a933fd4-d63a-5971-87c8-a7ecc3737ffd",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "d2589ea4-e9b5-58f9-b1b2-84261e9574af",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "0c9ed2aa-90ab-5c09-98f6-245382e4ca45",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "2736efa3-9b3f-5936-8356-3e0c8851bd8c",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "81ff26b7-8df2-5831-a3db-15ff8a6b0eec",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "c1b27691-4a1b-3ee2-bb73-595b155b99be",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "8fad7db1-261b-5fe4-ac44-cfed51acc94e",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "5077fcda-0a85-5701-aac3-961ad5431bb7",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "seed:tree:FallbackRecovery",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "fc82d884-b2c7-38a7-9783-ac2bba41237f",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "seed:tree:SequentialPipeline",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "98a12e20-aa7f-56ac-848f-08f39518c4a7",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "77b60cc0-b72c-5864-b394-32bd1d81fce1",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "c384730a-2c8e-55d7-827f-5e06deb3e922",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "e555185f-3ace-5fff-b966-53c1fc5f32d8",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "5681632e-0d1d-5b17-bb5b-f77a092ba0da",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "seed:tree:ResearchThenSynthesize",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "db62ff6f-cfa7-5e58-bfa2-e71c7b3a4a90",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "seed:tree:ParallelIndependent",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "acbcf0ca-6478-3a63-8b93-31b93bf0902c",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "d41af303-dcb2-3599-9198-0c006d1cc364",
+        "name" : null,
+        "history-versions" : 4,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "e3f3f53a-6235-5e8e-9eef-1821b5d880eb",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "b393c167-de5b-5a4b-b0a8-fc0d8ca0c0bf",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "7fa28bb1-d102-5faa-a811-abcce791c308",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "tree-class",
+        "target-id" : "6eb8eb3e-699b-57c0-97d5-56dba9ebe0da",
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      }, {
+        "granularity" : "node-instance",
+        "target-id" : [ "dd9e3bce-16e4-56ed-bdcd-e32c08852a4b", "90dcc7a5-cd9a-5bc7-b7fa-755090c1d75f" ],
+        "name" : null,
+        "history-versions" : 1,
+        "claims" : 0,
+        "claim-set-version" : 0
+      } ],
+      "evidence" : "Full projection of the :ontology/descriptions read model (rmp/project): {granularity {target-id {:current :history :claims}}}; name = :name/:label/:title of the current body when present, else null (target-id is the identifier)."
+    },
+    "claims" : {
+      "claim-deltas-recorded-events" : 0,
+      "targets-with-claims" : 0
+    },
+    "judge-scores" : {
+      "read-model-entries" : 2,
+      "score-entries-total" : 4,
+      "score-emitted-events" : 4,
+      "composite-score-events" : 2,
+      "note" : "Read-model-entries counts [sheet tick node] tuples; score-entries-total counts individual judge scores. Judge calls in the install smokes and the blocker-triage calibration used the offline evaluate-single path (no events). The scores present here came from Part B (results/judge-persistence.md): tier-1 judges ATTACHED to the summarizer-judged sheet's leaf, fired by the :evaluation/on-node-execution-completed processor, written by the :evaluation/record-judge-score commands — the only path that emits :judge/score-emitted."
+    },
+    "auto-classified-executions" : {
+      "tree-profiles-count" : 0,
+      "tree-strength-recorded-events" : 0,
+      "tree-weakness-recorded-events" : 0,
+      "tree-problem-mapping-events" : 0,
+      "evidence" : "Tree profiles are the read model that execution classification lands in; zero profile events of any kind exist in the store."
+    },
+    "node-experiences" : {
+      "read-model-entries" : 0,
+      "node-pattern-learned-events" : 0,
+      "learnings" : { },
+      "statistics" : {
+        "node-types-with-learnings" : 0,
+        "by-node-type" : { }
+      }
+    },
+    "consolidations" : {
+      "requested-events" : 8,
+      "recent-count-by-target-type" : {
+        ":node-type" : {
+          "ok" : 4
+        },
+        ":node-instance" : {
+          "ok" : 4
+        },
+        ":tree-fingerprint" : {
+          "ok" : 0
+        },
+        ":tree-class" : {
+          "ok" : 0
+        }
+      },
+      "unanswered-requests" : {
+        "ok" : [ ]
+      },
+      "claim-deltas-recorded-events" : 0,
+      "note" : "Consolidation requests fired from the threshold trigger during the install smokes' repeated leaf executions (results/learning-diagnosis.md). Root cause of their original orphaning (proven): the consuming processor (:ontology/consolidate-on-request, ontology/core/consolidator.clj) was required by no production or consumer namespace, so it was never registered. Fixed consumer-side 2026-10-17 (router-loop.system requires the namespace + pins :ontology-consolidator-model): registry 34 -> 35. Ledger now fully answered: 8 requested — 2 completed (node-type leaf description v1, consolidation-wiring.md; node-instance [smoke-a summarize] description v1, consolidation-node-instance.md), 6 swept to :ontology/description-consolidation-failed (:caller-interrupted, attempts 0), 0 unanswered. Claim deltas remain 0 by design (node-type/node-instance targets take the body path; claim deltas are :tree-class-only, CC-5)."
+    },
+    "behavior-mints" : {
+      "behavioral-subtree-minted-events" : 20,
+      "provenance-frequencies" : {
+        "human-authored" : 20
+      },
+      "note" : "All mints in the store come from seed-baseline-corpus! (E3 durable coding subbehaviors, command carries :provenance :human-authored) — bootstrap content, not runtime volitional minting or promotion of an execution pattern."
+    }
+  },
+  "layer8" : {
+    "interface-loaded" : true,
+    "interface-namespace" : "ai.obney.orc.mcp-sheet-builder.interface",
+    "registered-commands-containing-mcp" : [ ],
+    "registered-queries-containing-mcp" : [ ],
+    "registry-note" : "The MCP Sheet Builder registers NO Grain commands or queries (grep of components/mcp-sheet-builder/src for defcommand/defquery is empty); it is a plain function API (connect, list-tools, generate-sheet, ...) required by router-loop.system for side-effect registration alongside the other components.",
+    "mcp-servers-configured" : 0,
+    "sheets-generated-from-mcp-schemas" : 0,
+    "evidence" : "No :mcp* event types exist in the store census; no consumer code calls any mcp-sheet-builder function (grep of consumer/src shows only the :require in router-loop.system); no MCP connection config exists in the consumer."
+  }
+}

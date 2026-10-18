@@ -1,0 +1,1 @@
+result: {:optimization-id #uuid "bc49f10d-779e-46b9-bd4b-d4db090b4c74", :status :completed, :best-candidate {:instructions {"summarize" "Summarize the input text in 2 sentences."}, :score 0.875, :candidate-id #uuid "a1622938-3c2f-49be-ac45-d53440652a7c"}, :best-score 0.875, :improvement 0.0, :duration-ms 395896}

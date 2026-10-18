@@ -1,0 +1,11 @@
+# Real router data (Ben's Things titles/notes/feedback/decisions) lives here
+# locally ONLY. This fork is PUBLIC — data/ must never be tracked, committed,
+# or pushed. Verified with `git check-ignore` at setup (2026-10-17) and to be
+# re-verified before every commit in this experiment.
+data/
+# Runtime state (event store, LMDB, ColBERT indexes, model caches) — local only.
+consumer/runtime/
+consumer/.cpcache/
+consumer/.orc-colbert-indexes/
+# Local secrets / env files must never be tracked.
+*.env.local
